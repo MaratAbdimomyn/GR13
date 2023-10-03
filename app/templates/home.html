@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Модели Опеля которые мне нравятся</h3>
+
+
+    <ul>
+        <li>Brand Name Engine</li>
+    </ul>
+
+    {% for i in car1 %}
+    <ul>
+        <li>{{ i.brand }} <a href={% url 'about' i.pk %}>{{ i.name }}</a> {{ i.engine }}</li>
+    </ul>
+    {% endfor %}
+</body>
+
+</html>
